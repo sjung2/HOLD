@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Used Cars</title>
+    <link rel="stylesheet" href="style_sheet.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sam's Premium Used Car Lot</h1>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <div class="filter-item">
+                    <label for="yearMin">Min Year</label>
+                    <input type="number" id="yearMin" min="2018" max="2024">
+                </div>
+                <div class="filter-item">
+                    <label for="yearMax">Max Year</label>
+                    <input type="number" id="yearMax" min="2018" max="2024">
+                </div>
+                <div class="filter-item">
+                    <label for="make">Make</label>
+                    <select id="make" multiple>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Cadillac">Cadillac</option>
+                        <option value="Lucid">Lucid</option>
+                        <option value="Porsche">Porsche</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="maxMileage">Max Mileage</label>
+                    <input type="number" id="maxMileage" step="1000">
+                </div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-item">
+                    <label for="priceMin">Min Price</label>
+                    <input type="number" id="priceMin" min="0" step="1000">
+                </div>
+                <div class="filter-item">
+                    <label for="priceMax">Max Price</label>
+                    <input type="number" id="priceMax" min="0" step="1000">
+                </div>
+                <div class="filter-item">
+                    <label for="color">Color</label>
+                    <select id="color" multiple>
+                        <option value="Black">Black</option>
+                        <option value="White">Green</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Red">Red</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label>&nbsp;</label>
+                    <button class="apply-filters" onclick="applyFilters()">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cars-grid" id="carsGrid">
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
